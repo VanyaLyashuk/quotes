@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'GreatLakesNF';
+  src: url('../fonts/GreatLakesNF/GreatLakesNF.eot');
+  src: url('../fonts/GreatLakesNF/GreatLakesNF.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/GreatLakesNF/GreatLakesNF.woff2') format('woff2'),
+       url('../fonts/GreatLakesNF/GreatLakesNF.woff') format('woff'),
+       url('../fonts/GreatLakesNF/GreatLakesNF.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TwCenMT-CondensedBold';
+  src: url('../fonts/TwCenMT-CondensedBold/TwCenMT-CondensedBold.eot');
+  src: url('../fonts/TwCenMT-CondensedBold/TwCenMT-CondensedBold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/TwCenMT-CondensedBold/TwCenMT-CondensedBold.woff2') format('woff2'),
+       url('../fonts/TwCenMT-CondensedBold/TwCenMT-CondensedBold.woff') format('woff2'),
+       url('../fonts/TwCenMT-CondensedBold/TwCenMT-CondensedBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}

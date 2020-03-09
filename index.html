@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes web-template</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:700,900|Montserrat:400,
+    500,600,700|Raleway:100,200,300,400,500,600,
+                700&display=swap&subset=latin-ext" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <!-- Sprites -->
+    <svg style="display: none;">
+      <symbol id="facebook" viewBox="0 0 24 24">
+        <g>
+          <path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/>
+        </g>
+      </symbol>
+      <symbol id="twitter" viewBox="0 0 512 512">
+        <g>
+          <g>
+            <path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+              c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+              c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+              c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+              c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+              c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+              C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+              C480.224,136.96,497.728,118.496,512,97.248z"/>
+          </g>
+        </g>
+      </symbol>
+      <symbol id="linkedin" viewBox="0 0 24 24">
+        <g>
+          <path d="m23.994 24v-.001h.006v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07v-2.185h-4.773v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243v7.801z"/><path d="m.396 7.977h4.976v16.023h-4.976z"/><path d="m2.882 0c-1.591 0-2.882 1.291-2.882 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909c-.001-1.591-1.292-2.882-2.882-2.882z"/>
+        </g>
+      </symbol>
+      <symbol id="youtube" viewBox="0 0 512 512">
+        <g>
+          <g>
+            <path d="M490.24,113.92c-13.888-24.704-28.96-29.248-59.648-30.976C399.936,80.864,322.848,80,256.064,80
+              c-66.912,0-144.032,0.864-174.656,2.912c-30.624,1.76-45.728,6.272-59.744,31.008C7.36,138.592,0,181.088,0,255.904
+              C0,255.968,0,256,0,256c0,0.064,0,0.096,0,0.096v0.064c0,74.496,7.36,117.312,21.664,141.728
+              c14.016,24.704,29.088,29.184,59.712,31.264C112.032,430.944,189.152,432,256.064,432c66.784,0,143.872-1.056,174.56-2.816
+              c30.688-2.08,45.76-6.56,59.648-31.264C504.704,373.504,512,330.688,512,256.192c0,0,0-0.096,0-0.16c0,0,0-0.064,0-0.096
+              C512,181.088,504.704,138.592,490.24,113.92z M192,352V160l160,96L192,352z"/>
+          </g>
+        </g>
+      </symbol>
+      <symbol id="g-plus" viewBox="0 0 512 512">
+        <g>
+          <g>
+            <polygon points="448,224 448,160 416,160 416,224 352,224 352,256 416,256 416,320 448,320 448,256 512,256 512,224    "/>
+          </g>
+        </g>
+        <g>
+          <g>
+            <path d="M160,224v64h90.528c-13.216,37.248-48.8,64-90.528,64c-52.928,0-96-43.072-96-96c0-52.928,43.072-96,96-96
+              c22.944,0,45.024,8.224,62.176,23.168l42.048-48.256C235.424,109.824,198.432,96,160,96C71.776,96,0,167.776,0,256
+              s71.776,160,160,160s160-71.776,160-160v-32H160z"/>
+          </g>
+        </g>
+      </symbol>
+      <symbol id="pinterest" viewBox="0 0 511.977 511.977">
+        <g>
+          <g>
+            <path d="M262.948,0C122.628,0,48.004,89.92,48.004,187.968c0,45.472,25.408,102.176,66.08,120.16
+              c6.176,2.784,9.536,1.6,10.912-4.128c1.216-4.352,6.56-25.312,9.152-35.2c0.8-3.168,0.384-5.92-2.176-8.896
+              c-13.504-15.616-24.224-44.064-24.224-70.752c0-68.384,54.368-134.784,146.88-134.784c80,0,135.968,51.968,135.968,126.304
+              c0,84-44.448,142.112-102.208,142.112c-31.968,0-55.776-25.088-48.224-56.128c9.12-36.96,27.008-76.704,27.008-103.36
+              c0-23.904-13.504-43.68-41.088-43.68c-32.544,0-58.944,32.224-58.944,75.488c0,27.488,9.728,46.048,9.728,46.048
+              S144.676,371.2,138.692,395.488c-10.112,41.12,1.376,107.712,2.368,113.44c0.608,3.168,4.16,4.16,6.144,1.568
+              c3.168-4.16,42.08-59.68,52.992-99.808c3.968-14.624,20.256-73.92,20.256-73.92c10.72,19.36,41.664,35.584,74.624,35.584
+              c98.048,0,168.896-86.176,168.896-193.12C463.62,76.704,375.876,0,262.948,0z"/>
+          </g>
+        </g>
+      </symbol>
+      <symbol id="instagram" viewBox="0 0 512 512">
+        <g>
+          <g>
+            <path d="M352,0H160C71.648,0,0,71.648,0,160v192c0,88.352,71.648,160,160,160h192c88.352,0,160-71.648,160-160V160
+              C512,71.648,440.352,0,352,0z M464,352c0,61.76-50.24,112-112,112H160c-61.76,0-112-50.24-112-112V160C48,98.24,98.24,48,160,48
+              h192c61.76,0,112,50.24,112,112V352z"/>
+          </g>
+        </g>
+        <g>
+          <g>
+            <path d="M256,128c-70.688,0-128,57.312-128,128s57.312,128,128,128s128-57.312,128-128S326.688,128,256,128z M256,336
+              c-44.096,0-80-35.904-80-80c0-44.128,35.904-80,80-80s80,35.872,80,80C336,300.096,300.096,336,256,336z"/>
+          </g>
+        </g>
+      </symbol>
+      <symbol id="mail" viewBox="0 0 512 512">
+        <g>
+          <g>
+            <g>
+              <path d="M10.688,95.156C80.958,154.667,204.26,259.365,240.5,292.01c4.865,4.406,10.083,6.646,15.5,6.646
+                c5.406,0,10.615-2.219,15.469-6.604c36.271-32.677,159.573-137.385,229.844-196.896c4.375-3.698,5.042-10.198,1.5-14.719
+                C494.625,69.99,482.417,64,469.333,64H42.667c-13.083,0-25.292,5.99-33.479,16.438C5.646,84.958,6.313,91.458,10.688,95.156z"/>
+              <path d="M505.813,127.406c-3.781-1.76-8.229-1.146-11.375,1.542c-46.021,39.01-106.656,90.552-152.385,129.885
+                c-2.406,2.063-3.76,5.094-3.708,8.271c0.052,3.167,1.521,6.156,4,8.135c42.49,34.031,106.521,80.844,152.76,114.115
+                c1.844,1.333,4.031,2.01,6.229,2.01c1.667,0,3.333-0.385,4.865-1.177c3.563-1.823,5.802-5.49,5.802-9.49V137.083
+                C512,132.927,509.583,129.146,505.813,127.406z"/>
+              <path d="M16.896,389.354c46.25-33.271,110.292-80.083,152.771-114.115c2.479-1.979,3.948-4.969,4-8.135
+                c0.052-3.177-1.302-6.208-3.708-8.271C124.229,219.5,63.583,167.958,17.563,128.948c-3.167-2.688-7.625-3.281-11.375-1.542
+                C2.417,129.146,0,132.927,0,137.083v243.615c0,4,2.24,7.667,5.802,9.49c1.531,0.792,3.198,1.177,4.865,1.177
+                C12.865,391.365,15.052,390.688,16.896,389.354z"/>
+              <path d="M498.927,418.375c-44.656-31.948-126.917-91.51-176.021-131.365c-4-3.26-9.792-3.156-13.729,0.24
+                c-9.635,8.406-17.698,15.49-23.417,20.635c-17.563,15.854-41.938,15.854-59.542-0.021c-5.698-5.135-13.76-12.24-23.396-20.615
+                c-3.906-3.417-9.708-3.521-13.719-0.24c-48.938,39.719-131.292,99.354-176.021,131.365c-2.49,1.792-4.094,4.552-4.406,7.604
+                c-0.302,3.052,0.708,6.083,2.802,8.333C19.552,443.01,30.927,448,42.667,448h426.667c11.74,0,23.104-4.99,31.198-13.688
+                c2.083-2.24,3.104-5.271,2.802-8.323C503.021,422.938,501.417,420.167,498.927,418.375z"/>
+            </g>
+          </g>
+        </g>
+      </symbol>
+      <symbol id="share" viewBox="0 0 337.792 337.792">
+        <g>
+          <path d="M337.792,134.824l-130.824,99.441v-52.216C117.061,173.419,30.735,207.817,0.001,302.41
+            C-0.337,180.728,99.895,111.781,206.968,88.488V35.382L337.792,134.824z"/>
+        </g>
+      </symbol>
+    </svg>
+    <!--/ Sprites   -->
+
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__logo">Quotes</div>
+          <div class="menu-icon-wrapper">
+            <span class="menu-icon">Menu</span>
+          </div>
+        </div>
+      </div>
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Courses</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Our portfolio</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Enrole now</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Services</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Blog</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="main-slider">
+        <div class="main-slider__item">
+          <img src="img/main-slider/banner.jpg" alt="">
+          <div class="main-slider__text">
+            <h1 class="main-slider__title">Smile</h1>
+            <h2 class="main-slider__subtitle">it costs you nothing</h2>
+          </div>
+        </div>
+
+        <div class="main-slider__item">
+          <img src="img/main-slider/02.jpg" alt="">
+          <div class="main-slider__text">
+            <h1 class="main-slider__title">Smile</h1>
+            <h2 class="main-slider__subtitle">it costs you nothing</h2>
+          </div>
+        </div>
+
+        <div class="main-slider__item">
+          <img src="img/main-slider/03.jpg" alt="">
+          <div class="main-slider__text">
+            <h1 class="main-slider__title">Smile</h1>
+            <h2 class="main-slider__subtitle">it costs you nothing</h2>
+          </div>
+        </div>
+      </section>
+    </header>
+    <!--/ Header  -->
+
+    <!-- Free -->
+    <section class="free">
+      <div class="container">
+        <div class="free__inner">
+          <h3 class="free__subtitle">The most inclusive</h3>
+          <h2 class="free__title section-title">Free PSD Tem plate</h2>
+          <h4 class="free__description bar">
+            <div>Free for commercial and personal use.</div>
+            You can easily edit its contents and code it for yourself or your
+            client!
+          </h4>
+          <p class="free__text text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget
+            nisi eget tortor iaculis tristique. Aliquam tincidunt posuere tortor
+            hendrerit elementum. Nunc laoreet lorem a sem auctor fringilla.
+            Pellentesque dignissim accumsan lobortis. Sed pharetra erat vitae
+            dui imperdiet quis commodo orci dapibus.
+          </p>
+
+          <p class="free__text text">
+            Cum sociis natoque penatibus et magnis dis parturient montes,
+            nascetur ridiculus mus. Fusce at nunc libero. Nam metus lorem,
+            rhoncus ac mattis ornare, blandit vel risus.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!--/ Free -->
+
+    <!-- Quotes -->
+    <section class="quotes">
+      <div class="quotes__inner quotes-slider">
+        <div class="quotes__item">
+          <div class="quotes__content">
+            <p class="quotes__text">
+              I love people who make me laugh. I honestly think it’s the thing
+              I like most, to laugh. It cures a multitude of ills. It's
+              the most important thing in a person.
+            </p>
+            <span class="quotes__author">Audrey Hepburn</span>
+          </div>
+          <div class="quotes__img">
+            <img src="img/quotes/01.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="quotes__item">
+          <div class="quotes__content">
+            <p class="quotes__text">
+              I love people who make me laugh. I honestly think it’s the thing
+              I like most, to laugh. It cures a multitude of ills. It's
+              the most important thing in a person.
+            </p>
+            <span class="quotes__author">Ivn Ivn</span>
+          </div>
+          <div class="quotes__img">
+            <img src="img/quotes/02.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="quotes__item">
+          <div class="quotes__content">
+            <p class="quotes__text">
+              I love people who make me laugh. I honestly think it’s the thing
+              I like most, to laugh. It cures a multitude of ills. It's
+              the most important thing in a person.
+            </p>
+            <span class="quotes__author">Audrey Andrey</span>
+          </div>
+          <div class="quotes__img">
+            <img src="img/quotes/03.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/ Quotes  -->
+
+    <!-- Reasons -->
+    <section class="reasons">
+      <div class="container">
+        <div class="reasons__inner">
+          <h2 class="reasons__title section-title bar">Reasons to be happy</h2>
+          <div class="reasons__list">
+            <article class="reason">
+              <h4 class="reason__title">You are alive</h4>
+              <p class="text">
+                Waking up to see another day is a blessing. Don't take it for
+                granted. Make it count and be happy that you're alive.
+              </p>
+              <span class="reason__author">Anonymous</span>
+            </article>
+
+            <article class="reason">
+              <h4 class="reason__title">Someone loves you</h4>
+              <p class="text">
+                Someone who really loves you sees what a mess you can be, how
+                moody you can get, how hard you are to handle, but still wants
+                you in their life.
+              </p>
+              <span class="reason__author">Anonymous</span>
+            </article>
+
+            <article class="reason">
+              <h4 class="reason__title">Enjoy the moment</h4>
+              <p class="text">
+                Sometimes you will never know the true value of a moment until
+                it becomes a memory.
+              </p>
+              <span class="reason__author">Anonymous</span>
+            </article>
+
+            <article class="reason">
+              <h4 class="reason__title">Health is wealth</h4>
+              <p class="text">
+                It is health that is real wealth and not pieces of gold and silver.
+              </p>
+              <span class="reason__author">Mahatma Gandhi</span>
+            </article>
+          </div>
+
+          <button class="btn">More reasons</button>
+        </div>
+      </div>
+    </section>
+    <!--/ Reasons  -->
+
+    <!-- Quote -->
+    <section class="quote">
+      <div class="container">
+        <div class="quote__inner">
+          <h4 class="quote__text">
+            I love you for all that you are, all that you have been,
+            and all you're yet to be.
+          </h4>
+          <div class="quote__source">
+            Quote of the day, from
+            <span><a href="#" class="quote__link">Love Quotes</a></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/ Quote -->
+
+    <!-- Posters -->
+    <section class="posters">
+      <div class="container">
+        <div class="posters__inner">
+          <h2 class="posters__title section-title bar">Buy Posters Prints</h2>
+          <section class="posters__content">
+            <div class="poster">
+              <img src="img/man.jpg" alt="">
+              <div class="poster__content">
+                <h4 class="poster__title">
+                  <span>Stay</span>
+                  <span>True,</span>
+                  <span>Stay</span>
+                  Gentelmen
+                </h4>
+                <a href="#" class="poster__link buy-link">Buy now</a>
+                <a href="#" class="poster__link share-link">
+                  Share
+                  <svg class="share__icon">
+                    <use xlink:href="#share"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="posters__wrapper">
+              <div class="poster">
+                <img src="img/rock.jpg" alt="">
+                <div class="poster__content">
+                  <h4 class="poster__title">
+                    And muse of nature  with a poet’s eye
+                  </h4>
+                  <span class="poster__author">Thomas Campbell</span>
+                </div>
+              </div>
+
+              <div class="poster">
+                <img src="img/cap.jpg" alt="">
+                <div class="poster__content">
+                  <h4 class="poster__title">
+                    make work<span>Fun & Play</span>
+                  </h4>
+                </div>
+              </div>
+
+              <div class="poster">
+                <img src="img/man02.jpg" alt="">
+                <div class="poster__content">
+                  <h4 class="poster__title">
+                    Silence is<span>Golden</span>
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </section>
+          <button class="btn posters-btn">Browse posters</button>
+        </div>
+      </div>
+    </section>
+    <!--/ Posters  -->
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <section class="browse">
+            <h5 class="footer__title">Browse</h5>
+            <ul class="footer__list">
+              <li><a href="#" class="footer__link">Home</a></li>
+              <li><a href="#" class="footer__link">About us</a></li>
+              <li><a href="#" class="footer__link">Categories</a></li>
+              <li><a href="#" class="footer__link">Info</a></li>
+              <li><a href="#" class="footer__link">Services</a></li>
+            </ul>
+          </section>
+
+          <section class="shop">
+            <h5 class="footer__title">Shop</h5>
+            <ul class="footer__list">
+              <li><a href="#" class="footer__link">Account</a></li>
+              <li><a href="#" class="footer__link">Help & Guide</a></li>
+              <li><a href="#" class="footer__link">Shipping & Returns</a></li>
+              <li><a href="#" class="footer__link">FAQs</a></li>
+            </ul>
+          </section>
+
+          <section class="contact">
+            <h5 class="footer__title">Contact</h5>
+            <ul class="footer__list">
+              <li class="footer__item">Quotes PSD Template</li>
+              <li class="footer__item">Rudra Street, 12354 Villa</li>
+              <li class="footer__item">My State - My Country</li>
+              <li class="footer__item">987658</li>
+            </ul>
+
+            <ul class="footer__list">
+              <li class="footer__item">Phone: + 01 234 567 890</li>
+              <li class="footer__item">Fax: + 01 234 567 890</li>
+              <li class="footer__item">graphicsfuel@gmail.com</li>
+            </ul>
+          </section>
+
+          <section class="subscribe">
+            <h5 class="footer__title">Subscribe now</h5>
+            <h6 class="subscribe__info">
+              Get our latest news and product updates daily
+            </h6>
+            <form action="#" class="subscribe__form">
+              <input type="text" placeholder="Email Address">
+            </form>
+            <button class="btn submit-btn">Submit</button>
+          </section>
+        </div>
+      </div>
+      <section class="copyright">
+        <div class="container">
+          <div class="copyright__inner">
+            <div class="copyright__text">
+              2016 © Copyright - Quotes PSD Templates. All rights reserved.
+            </div>
+            <ul class="social">
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="social__icon">
+                    <use xlink:href="#facebook">  </use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="social__icon">
+                    <use xlink:href="#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="social__icon">
+                    <use xlink:href="#linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="social__icon">
+                    <use xlink:href="#youtube"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="social__icon">
+                    <use xlink:href="#g-plus"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="social__icon">
+                    <use xlink:href="#pinterest"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="social__icon">
+                    <use xlink:href="#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="social__icon">
+                    <use xlink:href="#mail"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <!--/ Footer  -->
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Slick Slider -->
+    <script src="js/slick.min.js"></script>
+    <!-- JS -->
+    <script src="js/main.js"></script>
+    <!-- Livereload -->
+    <script>
+      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+  </body>
+</html>
